@@ -1,0 +1,14 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	nome := "eu nao tenho inimigos"
+	nomes := strings.Fields(nome)
+	quantidade := len(nomes)
+	fmt.Print(quantidade)
+
+}
