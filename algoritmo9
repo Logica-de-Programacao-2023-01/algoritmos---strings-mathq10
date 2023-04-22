@@ -1,0 +1,27 @@
+package main
+
+import "fmt"
+
+func main() {
+	var nome string
+	var caracter string
+	var newcaracter string
+
+	fmt.Println("digite uma palavra:")
+	fmt.Scan(&nome)
+	fmt.Println("agora digite um caractere que queira substituir")
+	fmt.Scan(&caracter)
+	fmt.Println("agora digite um caractere para sbustitui-lo")
+	fmt.Scan(&newcaracter)
+
+	for i, rs := range nome {
+		if string(rs) == caracter {
+			nome = nome[:i] + newcaracter + nome[i+1:]
+
+		}
+
+	}
+
+	fmt.Print(nome)
+
+}
