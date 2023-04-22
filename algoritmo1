@@ -1,0 +1,16 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	var nome string
+	fmt.Println("fale algo:")
+	fmt.Scan(&nome)
+	maiusculo := strings.ToUpper(nome)
+	fmt.Println(maiusculo)
+	
+
+}
