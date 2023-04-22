@@ -1,0 +1,17 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	var nome string
+	fmt.Println("fale algo:")
+	fmt.Scan(&nome)
+	palavras := strings.Split(nome, " ")
+	for i := 0; i < len(palavras); i++ {
+		palavras[i] += ","
+	}
+	fmt.Print(strings.Join(palavras, " "))
+}
