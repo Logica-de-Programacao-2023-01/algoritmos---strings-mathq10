@@ -1,0 +1,16 @@
+package main
+
+import "fmt"
+
+func main() {
+	var nome string
+	var nome2 string
+	fmt.Println("digite duas palavra:")
+	fmt.Scan(&nome, &nome2)
+
+	if nome == nome2 {
+		fmt.Println("elas são iguais")
+	} else {
+		fmt.Println("elas são diferentes")
+	}
+}
