@@ -1,0 +1,24 @@
+package main
+
+import (
+	"fmt"
+	"unicode"
+)
+
+func main() {
+	var nome string
+	fmt.Println("DIGITE UMA PALAVRA:")
+	fmt.Scan(&nome)
+	temnumero := false
+	for _, rs := range nome {
+		if unicode.IsNumber(rs) {
+			temnumero = true
+			break
+		}
+	}
+	if temnumero {
+		fmt.Println("tem número")
+	} else {
+		fmt.Println("não tem número")
+	}
+}
