@@ -1,0 +1,18 @@
+package main
+
+import (
+	"fmt"
+	"strconv"
+)
+
+func main() {
+	var nome string
+	fmt.Println("digite um numero flutuante:")
+	fmt.Scan(&nome)
+	_, erro := strconv.ParseFloat(nome, 64)
+	if erro != nil {
+		fmt.Print("não é um número valido")
+	} else {
+		fmt.Print("é um número valido")
+	}
+}
