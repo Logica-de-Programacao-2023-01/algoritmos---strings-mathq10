@@ -1,0 +1,12 @@
+package main
+
+import "fmt"
+
+func main() {
+	nome := "samambaia"
+	var nome2 string
+	fmt.Println("escreva um adjetivo para a samambaia:")
+	fmt.Scan(&nome2)
+	novonome := nome + " " + nome2
+	fmt.Print(novonome)
+}
