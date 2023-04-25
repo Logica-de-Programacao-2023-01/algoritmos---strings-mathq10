@@ -1,0 +1,18 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	nome := "amora"
+	vogais := "aeiouAEIOU"
+	tirar := ""
+	for _, rs := range nome {
+		if !strings.ContainsRune(vogais, rs) {
+			tirar += string(rs)
+		}
+	}
+	fmt.Print(tirar)
+}
