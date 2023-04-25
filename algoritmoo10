@@ -1,0 +1,13 @@
+package main
+
+import "fmt"
+
+func main() {
+	nome := "amora"
+	nome2 := "aroma"
+	if len(nome) == len(nome2) {
+		fmt.Println("sao anagramas")
+	} else {
+		fmt.Println("não são anagramas")
+	}
+}
