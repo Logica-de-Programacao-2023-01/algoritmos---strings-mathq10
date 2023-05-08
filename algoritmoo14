@@ -1,0 +1,32 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	var strings string
+	fmt.Print("Digite uma sequência numérica: ")
+	fmt.Scanln(&strings)
+
+	if isDescending(strings) {
+		fmt.Println("A sequência é decrescente.")
+	} else {
+		fmt.Println("A sequência não é decrescente.")
+	}
+}
+
+func isDescending(s string) bool {
+	if len(s) <= 1 {
+		return true
+	}
+
+	last := rune(s[0])
+	for _, c := range s[1:] {
+		if r := rune(c); r >= last {
+			return false
+		}
+		last = r
+	}
+	return true
+}
