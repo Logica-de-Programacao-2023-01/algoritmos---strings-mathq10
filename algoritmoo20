@@ -1,0 +1,25 @@
+package main
+
+import (
+	"fmt"
+	"unicode"
+)
+
+func main() {
+	var strings string
+	fmt.Print("Digite uma string em CamelCase: ")
+	fmt.Scanln(&strings)
+
+	var numPalavras int = 1
+	for i, r := range strings {
+		if i > 0 && unicode.IsUpper(r) {
+			numPalavras++
+		}
+	}
+
+	if numPalavras > 1 {
+		fmt.Printf("A string está em CamelCase e possui %d palavras\n", numPalavras)
+	} else {
+		fmt.Println("A string não está em CamelCase")
+
+	}
