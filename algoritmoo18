@@ -1,0 +1,20 @@
+package main
+
+import (
+	"fmt"
+	"strconv"
+)
+
+func main() {
+	var strings string
+
+	fmt.Println("fale um nome:")
+	fmt.Scan(&strings)
+	
+	_, erro:= strconv.Atoi(strings)
+	if erro != nil {
+		fmt.Println("essa palavra não contém só número")
+	} else {
+		fmt.Println("essa palavra contém só número")
+	}
+}
