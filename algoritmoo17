@@ -1,0 +1,27 @@
+package main
+
+import (
+	"fmt"
+)
+
+func eLetra(c rune) bool {
+	return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')
+}
+
+func main() {
+	var strings string
+
+	fmt.Println("fale um nome:")
+	fmt.Scan(&strings)
+	unicaletra := make(map[rune]int)
+
+	for _, rs := range strings {
+		unicaletra[rs]++
+	}
+
+	for rs, a := range unicaletra {
+		if a == 1 && eLetra(rs) {
+			fmt.Printf("%c ", rs)
+		}
+	}
+}
