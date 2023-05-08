@@ -1,0 +1,23 @@
+package main
+
+import (
+	"fmt"
+	strings2 "strings"
+)
+
+func main() {
+	var strings string
+	fmt.Println("fale um nome:")
+	fmt.Scan(&strings)
+	output := ""
+	vogais := "aeiouAEIOU"
+	for _, rs := range strings {
+		if strings2.ContainsRune(vogais, rs) {
+			output += "*"
+		} else {
+			output += string(rs)
+		}
+	}
+	fmt.Print(output)
+
+}
