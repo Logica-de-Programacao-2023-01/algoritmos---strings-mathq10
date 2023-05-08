@@ -1,0 +1,20 @@
+package main
+
+import (
+	"fmt"
+	strings3 "strings"
+)
+
+func main() {
+	var strings string
+	var strings2 string
+	fmt.Println("fale um nome:")
+	fmt.Scan(&strings)
+	fmt.Println("fale um nome:")
+	fmt.Scan(&strings2)
+	if strings3.Contains(strings, strings2) {
+		fmt.Printf("%s contém em %s", strings2, strings)
+	} else {
+		fmt.Printf("%s não está contido em %s", strings2, strings)
+	}
+}
